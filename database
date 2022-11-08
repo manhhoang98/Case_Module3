@@ -1,0 +1,61 @@
+CREATE TABLE `login_casestudy3`.`account` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NULL,
+  `age` VARCHAR(45) NULL,
+  `gender` VARCHAR(45) NULL,
+  `phonenumber` VARCHAR(45) NULL,
+  `address` VARCHAR(45) NULL,
+  `img` VARCHAR(500) NULL,
+  PRIMARY KEY (`id`),
+  id_role int,
+  foreign key (id_role) references roles(id));
+
+
+
+CREATE TABLE `login_casestudy3`.`roles` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+CREATE TABLE `login_casestudy3`.`product` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `img` VARCHAR(500) NULL,
+  `price` DOUBLE NULL,
+  `amount` INT NULL,
+  `describe` LONGTEXT NULL,
+  PRIMARY KEY (`id`),
+  id_category int ,
+   foreign key (id_category) references category(idcategory));
+  
+  
+  CREATE TABLE `login_casestudy3`.`category` (
+  `idcategory` INT NOT NULL,
+  `namecategory` VARCHAR(45) NULL,
+  PRIMARY KEY (`idcategory`));
+  
+  CREATE TABLE `login_casestudy3`.`cart` (
+  `id` INT NOT NULL,
+  `allprice` DOUBLE NULL,
+  PRIMARY KEY (`id`),
+  id_product INT,
+  foreign key (id_product) references product(id),
+  id_account INT,
+  foreign key (id_account) references account(id));
+  
+  CREATE TABLE IF NOT EXISTS `login_casestudy3`.`comment` (
+  `commentID` INT(20) NOT NULL AUTO_INCREMENT,
+  `commentContent` VARCHAR(500) NOT NULL,
+  `id_product` INT(20) NOT NULL,
+  `id_account` INT(20) NOT NULL,
+  `rating` INT(11) NOT NULL,
+  PRIMARY KEY (`commentID`),
+  foreign key (id_product) references product(id),
+  foreign key (id_account) references account(id))
+  
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
