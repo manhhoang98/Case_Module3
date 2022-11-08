@@ -307,7 +307,7 @@
                                     <td><input name="id_category" value="${sanpham.id_category}"></td>
                                 </tr>
                             </table>
-                            <button type="submit">Submit</button>
+                            <button type="submit" value="submit">Submit</button>
                         </form>
                     </div>
                     </tbody>

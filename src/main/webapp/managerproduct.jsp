@@ -57,13 +57,15 @@
                   </a>
                 </c:if>
                 <c:if test="${sessionScope.acc != null }">
+                  <c:if test="${sessionScope.acc.id_role == 1 }">
                   <a href="">
                     Hello ${sessionScope.acc.name}
                   </a>
+                  </c:if>
                   <a href="/logout">
                     Logout
                   </a>
-                </c:if>
+                </>
                 </a>
               </li>
             </ul>
