@@ -300,9 +300,11 @@
                       </c:if><a href="/productdetail?idproductdetail=${sp.id}">
                       <i class="ti-eye"></i>
                       </a>
+                      <c:if test="${sessionScope.acc.id_role ==2}">
                       <a href="/cart?id=${sp.id}">
                         <i class="ti-shopping-cart"></i>
                       </a>
+                      </c:if>
                     </div>
                   </div>
                   <div class="product-btm">
