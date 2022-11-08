@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/Khoa Hoc Lap Trinh/giohangIphone 13 ProMax.html" value="file://$PROJECT_DIR$/src/main/webapp/Khoa Hoc Lap Trinh" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/Khoa Hoc Lap Trinh/giohangSamSung A03.html" value="file://$PROJECT_DIR$/src/main/webapp/Khoa Hoc Lap Trinh" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/LoginForm/Login.jsp" value="file://$PROJECT_DIR$/src/main/webapp/LoginForm" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/LoginForm/Register.jsp" value="file://$PROJECT_DIR$/src/main/webapp/LoginForm" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/category.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/createproduct.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/web/Cart.jsp" value="file://$PROJECT_DIR$/src/main/webapp/web" />
+      </map>
+    </option>
+  </component>
+</project>
