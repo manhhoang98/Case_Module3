@@ -115,7 +115,7 @@
                   >
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a class="nav-link" href="product.jsp"
+                      <a class="nav-link" href="/product"
                       >Shop Category</a
                       >
                     </li>
@@ -278,6 +278,7 @@
           </tr>
           </thead>
           <tbody>
+          <c:if test="${sessionScope.acc.id_role ==1}">
           <c:forEach items="${sanphams}" var="product">
             <tr>
               <td>${product.id}</td>
@@ -297,8 +298,9 @@
               </td>
             </tr>
           </c:forEach>
+            <a class="main_btn" href="createproduct.jsp">Add Product</a>
+          </c:if>
 
-          <a class="main_btn" href="createproduct.jsp">Add Product</a>
 
           </tbody>
         </table>

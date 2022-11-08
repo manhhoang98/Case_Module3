@@ -108,5 +108,20 @@ public class DAO {
     }
 
 
-
+    public static void editProduct(Product product) {
+        try{
+            String sql = "UPDATE `login_casestudy3`.`product` SET `id`=?, `name` = ?, `img` = ?, `price` = ?, `amount` = ?, `describe` = ?, `id_category` = ? WHERE (`id` = ?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,product.getId());
+            preparedStatement.setString(2, product.getName());
+            preparedStatement.setString(3, product.getImg());
+            preparedStatement.setDouble(4,product.getPrice());
+            preparedStatement.setInt(5,product.getAmount());
+            preparedStatement.setString(6,product.getDescribe());
+            preparedStatement.setInt(7,product.getId_category());
+            preparedStatement.execute();
+        }catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }

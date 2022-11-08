@@ -1,5 +1,7 @@
 package controller;
 
+import dao.DAO;
+import dao.LoginDao;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -23,9 +25,16 @@ public class CreateAccountServlet extends HttpServlet {
         String address = request.getParameter("address");
         String img = request.getParameter("img");
         int role = Integer.parseInt(request.getParameter("id_role"));
-        AccountService.addAccount(new Account(id,username,password,name,age,gender,phoneNumber,address,img,role));
 
-        response.sendRedirect("/login");
+        Account account = LoginDao.checkAccount(username);
+        if (account == null){
+            AccountService.addAccount(new Account(id,username,password,name,age,gender,phoneNumber,address,img,role));
+            response.sendRedirect("/login");
+        }else {
+            response.sendRedirect("/login");
+        }
+
+
     }
 
     @Override

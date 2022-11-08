@@ -15,12 +15,13 @@ public class ProductService {
         CRUD_Product.save(product);
     }
 
-    public static void edit( Product product){
+    public static void edit(int id, Product product){
         for (int i = 0; i < products.size(); i++) {
-            if (products.get(i).getId() == product.getId()){
+            if (products.get(i).getId() == id){
                 products.set(i, product);
+                DAO.editProduct(product);
             }
-            DAO.updateProduct(product);
+
         }
 
 

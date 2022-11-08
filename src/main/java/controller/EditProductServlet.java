@@ -34,7 +34,7 @@ public class EditProductServlet extends HttpServlet {
         int amount = Integer.parseInt(req.getParameter("amount"));
         String describe = req.getParameter("describe");
         int id_category = Integer.parseInt(req.getParameter("id_category"));
-        ProductService.edit(new Product(id,name,img,price,amount,describe,id_category));
-        resp.sendRedirect("/managerproduct");
+        ProductService.edit(id ,new Product(id,name,img,price,amount,describe,id_category));
+        resp.sendRedirect("/product");
     }
 }

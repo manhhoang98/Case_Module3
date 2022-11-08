@@ -334,7 +334,8 @@
                 ${p.describe}
               </p>
               <div class="card_area">
-                <a class="main_btn" href="/cart?id=${p.id}">Add to Cart</a>
+                <c:if test="${sessionScope.acc.id_role ==2}">
+                <a class="main_btn" href="/cart?id=${p.id}">Add to Cart</a></c:if>
                 <a class="icon_btn" href="#">
                   <i class="lnr lnr lnr-diamond"></i>
                 </a>

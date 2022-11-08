@@ -266,18 +266,13 @@
   <div class="container">
     <div class="cart_inner">
       <div class="table-responsive">
-        <table class="table">
-          <thead>
-<h3>
-  Create Product
-</h3>
-          </thead>
+
           <tbody>
+          <c:if test="${sessionScope.acc.id_role ==1}">
           <form action="/create" method="post">
           <div align="center">
-
-              <h1>Edit Product</h1>
-              <table>
+              <h1>Create Product</h1>
+              <table >
                 <tr>
                   <td>Enter id</td>
                   <td><input name="id" value="0" readonly></td>
@@ -306,13 +301,19 @@
                   <td>Enter category</td>
                   <td><input name="id_category" value=""></td>
                 </tr>
-
+                <tr></tr>
+                <tr></tr>
               </table>
-              <button type="submit" value="">Submit</button>
+
+            <button type="submit" value="">Submit</button>
           </div>
           </form>
+          </c:if>
+          <c:if test="${sessionScope.acc ==null}">
+            Chỉ Admin Mạnh mới có quyền truy cập
+          </c:if>
           </tbody>
-        </table>
+
       </div>
     </div>
   </div>
